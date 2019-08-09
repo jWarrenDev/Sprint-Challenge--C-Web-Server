@@ -117,11 +117,17 @@ int main(int argc, char *argv[])
   if (send_request(sockfd, urlinfo->hostname, urlinfo->port, urlinfo->path) >= 0) {
 
     while ((numbytes = recv(sockfd, buf, BUFSIZE - 1, 0)) > 0) {
+      buf[numbytes] = '\0';
+      // printf("%s", buf[numbytes])
+      printf("%s", buf);
   
     }
   }
 
   printf("n/n");
+
+    
+  
   
 
   return 0;

@@ -123,12 +123,13 @@ int main(int argc, char *argv[])
   
     }
   }
-
   printf("n/n");
 
-    
+  free(urlinfo->hostname);
+  free(urlinfo->port);
+  free(urlinfo->path);
+  free(urlinfo);
+  close(sockfd);
   
-  
-
   return 0;
 }

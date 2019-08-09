@@ -114,10 +114,10 @@ int main(int argc, char *argv[])
   urlinfo_t *urlinfo = parse_url(argv[1]);
   sockfd = get_socket(urlinfo->hostname, urlinfo->port);
 
-  if (send_request() {
+  if (send_request(sockfd, urlinfo->hostname, urlinfo->port, urlinfo->path) >= 0) {
 
     while ((numbytes = recv(sockfd, buf, BUFSIZE - 1, 0)) > 0) {
-  // print the data we got back to stdout
+  
     }
   }
 
